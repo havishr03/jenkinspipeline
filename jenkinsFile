@@ -4,7 +4,7 @@ pipeline{
 		stages{
 		stage('checkout'){
 			steps{
-				git branch:'main',url:'https://github.com/havishr03/Gradlejenkinspipeline.git'
+				git branch:'main',url:'https://github.com/havishr03/jenkinspipeline.git'
 			}
 		}
 		stage('Build'){
