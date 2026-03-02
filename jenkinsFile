@@ -1,29 +1,25 @@
 pipeline{
 	agent any
 	
-	tools{
-		gradle 'Gradle'
-		jdk 'JDK'
-	}
-	stages{
+		stages{
 		stage('checkout'){
 			steps{
-				git branch:'master',url:'https://github.com/havishr03/Gradlejenkinspipeline.git'
+				git branch:'main',url:'https://github.com/havishr03/Gradlejenkinspipeline.git'
 			}
 		}
 		stage('Build'){
 			steps{
-				sh 'gradle build'
+				sh './gradle build'
 			}
 		}
 		stage('Test'){
 			steps{
-				sh 'gradle test'
+				sh './gradle test'
 			}
 		}
 		stage('Run Application'){
 			steps{
-				sh 'gradle run'
+				sh './gradle run'
 			}
 		}
 		post{
